@@ -4,29 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Casa moderna com piscina à venda | Bom Jardim, Campos de Júlio - MT</title>
-<meta name="description" content="Casa térrea moderna à venda no Bairro Bom Jardim, Campos de Júlio - MT. 3 quartos (1 suíte), piscina, área gourmet, 640 m². Fale agora pelo WhatsApp.">
+<meta name="description" content="Casa térrea moderna à venda no Bairro Bom Jardim, Campos de Júlio - MT. 3 quartos (1 suíte), piscina aquecida por energia solar, geração própria de energia (850+ kWh/mês), área gourmet, 640 m². Fale agora pelo WhatsApp.">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Casa moderna com piscina à venda | Bom Jardim, Campos de Júlio - MT">
-<meta property="og:description" content="Casa térrea moderna, 3 quartos (1 suíte), piscina, área gourmet e 640 m² de terreno. Fale agora pelo WhatsApp.">
+<meta property="og:description" content="Casa térrea moderna, 3 quartos (1 suíte), piscina aquecida por energia solar, geração própria de energia e 640 m² de terreno. Fale agora pelo WhatsApp.">
 <meta property="og:image" content="images/foto2.jpeg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,440;0,9..144,560;1,9..144,440&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --graphite:#2b2f33;
-    --graphite-soft:#454b51;
-    --offwhite:#f6f6f4;
+    --graphite:#26292c;
+    --graphite-2:#3d4247;
+    --graphite-soft:#5b6167;
+    --offwhite:#f5f2ec;
+    --paper:#ece6d9;
     --white:#ffffff;
-    --line:#e4e2dd;
+    --line:#dcd4c4;
+    --line-dark:rgba(255,255,255,.16);
     --whatsapp:#25D366;
-    --whatsapp-dark:#1ebd5a;
-    --radius:14px;
-    --shadow:0 10px 30px rgba(43,47,51,.08);
-    --ff-title:'Outfit', sans-serif;
+    --whatsapp-dark:#1ea952;
+    --radius:10px;
+    --shadow:0 14px 34px rgba(38,41,44,.1);
+    --ease:cubic-bezier(.16,.8,.24,1);
+    --ff-title:'Fraunces', serif;
     --ff-body:'Inter', sans-serif;
   }
 
@@ -35,6 +39,7 @@
   html{scroll-behavior:smooth;}
 
   body{
+    position:relative;
     font-family:var(--ff-body);
     background:var(--offwhite);
     color:var(--graphite);
@@ -43,180 +48,255 @@
     overflow-x:hidden;
   }
 
+  /* Textura sutil de grão, dá profundidade sem usar cor extra */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:999;
+    pointer-events:none;
+    opacity:.045;
+    mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
   img{display:block;max-width:100%;}
 
-  h1,h2,h3{font-family:var(--ff-title);font-weight:600;letter-spacing:-0.02em;}
+  h1,h2,h3{font-family:var(--ff-title);font-weight:560;letter-spacing:-0.01em;}
 
-  section{padding:64px 20px;}
+  section{padding:72px 20px;}
 
-  .container{max-width:1120px;margin:0 auto;}
+  .container{max-width:1160px;margin:0 auto;}
 
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease), transform .8s var(--ease);}
   .reveal.is-visible{opacity:1;transform:translateY(0);}
 
   /* ---------- HERO ---------- */
   .hero{
     position:relative;
-    height:100svh;
-    min-height:560px;
+    height:clamp(460px, 68vh, 640px);
     display:flex;
     align-items:flex-end;
     padding:0;
     overflow:hidden;
   }
-  .hero-bg{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    filter:blur(35px) brightness(.55) saturate(1.1);
-    transform:scale(1.2);
+  @media(min-width:900px){
+    .hero{height:100svh;min-height:560px;}
   }
   .hero-img{
     position:absolute;
     inset:0;
     width:100%;
     height:100%;
-    object-fit:contain;
-    object-position:center 42%;
-  }
-  @media(min-width:900px){
-    .hero-img{object-fit:cover;object-position:center 38%;}
+    object-fit:cover;
+    object-position:center 40%;
   }
   .hero::after{
     content:"";
     position:absolute;
     inset:0;
-    background:linear-gradient(180deg, rgba(20,22,24,0) 30%, rgba(20,22,24,.55) 70%, rgba(20,22,24,.88) 100%);
+    background:linear-gradient(180deg, rgba(20,22,24,.32) 0%, rgba(20,22,24,0) 22%, rgba(20,22,24,0) 55%, rgba(20,22,24,.62) 82%, rgba(20,22,24,.9) 100%);
   }
   .hero-content{
     position:relative;
     z-index:2;
     width:100%;
-    padding:0 20px 56px;
-    max-width:1120px;
+    padding:0 20px 64px;
+    max-width:1160px;
     margin:0 auto;
     color:var(--white);
   }
+  .hero-index{
+    position:absolute;
+    top:22px;
+    left:20px;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:rgba(255,255,255,.7);
+    font-size:.72rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    opacity:0;
+    animation:fadeUp .8s var(--ease) .15s forwards;
+  }
+  .hero-index::before{content:"";width:22px;height:1px;background:rgba(255,255,255,.55);}
+  @media(min-width:900px){.hero-index{top:32px;left:40px;}}
+
   .badge{
     display:inline-block;
     background:rgba(246,246,244,.14);
     border:1px solid rgba(255,255,255,.35);
     backdrop-filter:blur(6px);
     color:var(--white);
+    font-family:var(--ff-body);
     font-size:.78rem;
     font-weight:500;
     letter-spacing:.06em;
     text-transform:uppercase;
     padding:7px 14px;
     border-radius:999px;
-    margin-bottom:18px;
+    margin-bottom:20px;
+    opacity:0;
+    animation:fadeUp .8s var(--ease) .1s forwards;
   }
   .hero h1{
-    font-size:clamp(2rem, 6.5vw, 3.4rem);
-    line-height:1.08;
-    margin-bottom:14px;
-    max-width:14ch;
+    font-family:var(--ff-title);
+    font-weight:440;
+    font-style:italic;
+    font-size:clamp(2.3rem, 7.5vw, 4.2rem);
+    line-height:1.04;
+    margin-bottom:16px;
+    max-width:15ch;
+    opacity:0;
+    animation:fadeUp .9s var(--ease) .28s forwards;
   }
   .hero-sub{
     display:flex;
     align-items:center;
     gap:8px;
     font-size:clamp(1rem, 3vw, 1.15rem);
-    color:rgba(255,255,255,.92);
+    color:rgba(255,255,255,.9);
     font-weight:500;
+    letter-spacing:.01em;
+    opacity:0;
+    animation:fadeUp .9s var(--ease) .46s forwards;
   }
   .hero-sub svg{flex-shrink:0;}
+
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+  }
 
   .scroll-indicator{
     position:absolute;
     left:50%;
-    bottom:18px;
+    bottom:20px;
     transform:translateX(-50%);
     z-index:2;
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:6px;
-    color:rgba(255,255,255,.75);
-    animation:bob 2.2s ease-in-out infinite;
+    gap:10px;
+    color:rgba(255,255,255,.7);
+    opacity:0;
+    animation:fadeUp 1s var(--ease) .9s forwards;
   }
-  .scroll-indicator span{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;}
-  @keyframes bob{
-    0%,100%{transform:translate(-50%,0);}
-    50%{transform:translate(-50%,8px);}
+  .scroll-indicator span{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;}
+  .scroll-indicator i{
+    display:block;
+    width:1px;
+    height:26px;
+    background:rgba(255,255,255,.35);
+    overflow:hidden;
+    position:relative;
+  }
+  .scroll-indicator i::after{
+    content:"";
+    position:absolute;
+    left:0;top:-100%;
+    width:100%;height:100%;
+    background:var(--white);
+    animation:drip 2s ease-in-out infinite;
+  }
+  @keyframes drip{
+    0%{top:-100%;}
+    60%{top:100%;}
+    100%{top:100%;}
   }
 
   /* ---------- DESTAQUES ---------- */
-  .highlights{padding:40px 16px;background:var(--white);}
+  .highlights{padding:48px 16px 8px;background:var(--white);}
   .highlights-grid{
-    max-width:1120px;
+    max-width:1160px;
     margin:0 auto;
     display:grid;
     grid-template-columns:repeat(2, 1fr);
-    gap:12px;
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    transform:translateY(-1px);
   }
   .highlight-card{
-    background:var(--offwhite);
-    border-radius:var(--radius);
-    padding:20px 14px;
-    text-align:center;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:28px 16px;
     display:flex;
     flex-direction:column;
-    align-items:center;
-    gap:8px;
-    transition:transform .25s ease, box-shadow .25s ease;
+    gap:10px;
+    transition:background .3s ease;
   }
-  .highlight-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
-  .highlight-card svg{color:var(--graphite);}
-  .highlight-number{font-family:var(--ff-title);font-weight:600;font-size:1.05rem;}
-  .highlight-label{font-size:.8rem;color:var(--graphite-soft);}
+  .highlight-card:hover{background:var(--offwhite);}
+  .highlight-card svg{color:var(--graphite-soft);}
+  .highlight-number{font-family:var(--ff-title);font-weight:500;font-size:clamp(1.15rem,3vw,1.5rem);letter-spacing:-.01em;}
+  .highlight-label{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--graphite-soft);}
 
   @media(min-width:560px){
     .highlights-grid{grid-template-columns:repeat(3, 1fr);}
   }
-  @media(min-width:900px){
-    .highlights-grid{grid-template-columns:repeat(6, 1fr);}
+  @media(min-width:760px){
+    .highlights-grid{grid-template-columns:repeat(4, 1fr);}
+    .highlight-card{padding:30px 18px;}
+    .highlight-number{white-space:nowrap;}
   }
 
   /* ---------- SOBRE ---------- */
-  .section-head{max-width:640px;margin-bottom:32px;}
-  .eyebrow{
-    display:block;
-    font-size:.78rem;
-    font-weight:600;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:var(--whatsapp-dark);
-    margin-bottom:10px;
-  }
-  .about h2{font-size:clamp(1.6rem, 4vw, 2.2rem);margin-bottom:14px;}
-  .about p{color:var(--graphite-soft);font-size:1.02rem;max-width:64ch;}
-
-  .diff-grid{
-    margin-top:36px;
+  .about{position:relative;overflow:hidden;}
+  .about-grid{
     display:grid;
     grid-template-columns:1fr;
-    gap:14px;
+    gap:8px;
+    position:relative;
+  }
+  .section-head{max-width:640px;margin-bottom:8px;position:relative;z-index:1;}
+  .eyebrow{
+    display:block;
+    font-size:.76rem;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--whatsapp-dark);
+    margin-bottom:12px;
+  }
+  .about h2{
+    font-weight:440;
+    font-style:italic;
+    font-size:clamp(1.7rem, 4.4vw, 2.5rem);
+    margin-bottom:16px;
+    line-height:1.14;
+  }
+  .about p{color:var(--graphite-soft);font-size:1.03rem;max-width:56ch;position:relative;z-index:1;}
+
+  .diff-grid{
+    margin-top:44px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+    border-top:1px solid var(--line);
+    position:relative;
+    z-index:1;
   }
   .diff-card{
-    background:var(--white);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:22px;
-    transition:transform .25s ease, box-shadow .25s ease;
+    padding:26px 4px;
+    border-bottom:1px solid var(--line);
+    display:grid;
+    grid-template-columns:auto 1fr;
+    align-items:start;
+    gap:18px;
+    transition:padding-left .3s var(--ease);
   }
-  .diff-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
-  .diff-card svg{color:var(--graphite);margin-bottom:14px;}
-  .diff-card h3{font-size:1.02rem;margin-bottom:6px;}
+  .diff-card:hover{padding-left:12px;}
+  .diff-card svg{color:var(--graphite);margin-top:2px;}
+  .diff-card h3{font-family:var(--ff-title);font-weight:500;font-size:1.08rem;margin-bottom:4px;}
   .diff-card p{font-size:.9rem;color:var(--graphite-soft);}
 
-  @media(min-width:640px){
-    .diff-grid{grid-template-columns:repeat(2, 1fr);}
-  }
-  @media(min-width:1000px){
-    .diff-grid{grid-template-columns:repeat(4, 1fr);}
+  @media(min-width:720px){
+    .about-grid{grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start;}
+    .diff-grid{margin-top:0;grid-template-columns:repeat(2,1fr);border-top:none;border-left:1px solid var(--line);}
+    .diff-card{border-top:1px solid var(--line);padding:22px 24px;}
   }
 
   /* ---------- GALERIA ---------- */
@@ -239,16 +319,27 @@
     width:100%;
     height:100%;
     object-fit:cover;
-    transition:transform .5s ease;
+    transition:transform .6s var(--ease);
   }
-  .gallery-item:hover img{transform:scale(1.06);}
+  .gallery-item:hover img{transform:scale(1.05);}
+  .gallery-index{
+    position:absolute;
+    top:12px;
+    left:12px;
+    color:rgba(255,255,255,.85);
+    font-family:var(--ff-title);
+    font-style:italic;
+    font-size:.85rem;
+    text-shadow:0 1px 6px rgba(0,0,0,.4);
+  }
   .gallery-caption{
     position:absolute;
     left:0;right:0;bottom:0;
-    padding:18px 12px 10px;
-    font-size:.75rem;
+    padding:20px 14px 12px;
+    font-size:.74rem;
+    letter-spacing:.03em;
     color:var(--white);
-    background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.55));
+    background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.6));
   }
 
   @media(min-width:600px){
@@ -328,14 +419,32 @@
 
   /* ---------- LOCALIZAÇÃO ---------- */
   .location{
+    position:relative;
     background:var(--graphite);
     color:var(--white);
     text-align:center;
+    overflow:hidden;
   }
-  .location-inner{max-width:520px;margin:0 auto;}
-  .location svg{color:var(--white);margin-bottom:16px;}
-  .location h2{font-size:clamp(1.4rem, 4vw, 1.9rem);margin-bottom:10px;}
-  .location p{color:rgba(255,255,255,.72);font-size:.98rem;}
+  .location::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      repeating-linear-gradient(90deg, var(--line-dark) 0, var(--line-dark) 1px, transparent 1px, transparent 64px),
+      repeating-linear-gradient(0deg, var(--line-dark) 0, var(--line-dark) 1px, transparent 1px, transparent 64px);
+    opacity:.5;
+    mask-image:radial-gradient(circle at center, #000 0%, transparent 75%);
+  }
+  .location-inner{position:relative;max-width:520px;margin:0 auto;}
+  .location svg{color:var(--white);margin-bottom:18px;}
+  .location .eyebrow{color:rgba(255,255,255,.55);}
+  .location h2{
+    font-weight:440;
+    font-style:italic;
+    font-size:clamp(1.7rem, 5vw, 2.4rem);
+    margin-bottom:12px;
+  }
+  .location p{color:rgba(255,255,255,.68);font-size:.98rem;}
 
   /* ---------- CTA FINAL ---------- */
   .cta{
@@ -343,8 +452,13 @@
     text-align:center;
   }
   .cta-inner{max-width:520px;margin:0 auto;}
-  .cta h2{font-size:clamp(1.6rem, 4.5vw, 2.2rem);margin-bottom:10px;}
-  .cta p{color:var(--graphite-soft);margin-bottom:30px;}
+  .cta h2{
+    font-weight:440;
+    font-style:italic;
+    font-size:clamp(1.8rem, 5vw, 2.6rem);
+    margin-bottom:12px;
+  }
+  .cta p{color:var(--graphite-soft);margin-bottom:32px;}
 
   .btn-whatsapp{
     display:inline-flex;
@@ -365,11 +479,13 @@
 
   /* ---------- FOOTER ---------- */
   footer{
-    padding:26px 20px;
+    padding:24px 20px;
     text-align:center;
     background:var(--graphite);
-    color:rgba(255,255,255,.55);
-    font-size:.82rem;
+    color:rgba(255,255,255,.5);
+    font-size:.76rem;
+    letter-spacing:.03em;
+    border-top:1px solid var(--line-dark);
   }
 
   /* ---------- FLOATING WHATSAPP ---------- */
@@ -409,8 +525,8 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-bg" src="images/foto2.jpeg" alt="" aria-hidden="true">
   <img class="hero-img" src="images/foto2.jpeg" alt="Fachada da casa moderna em cinza grafite com garagem coberta e jardim" fetchpriority="high">
+  <span class="hero-index" aria-hidden="true">Ficha do imóvel</span>
   <div class="hero-content">
     <span class="badge">Casa à venda</span>
     <h1>Casa moderna com piscina</h1>
@@ -421,7 +537,7 @@
   </div>
   <div class="scroll-indicator" aria-hidden="true">
     <span>Role para ver mais</span>
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+    <i></i>
   </div>
 </section>
 
@@ -446,12 +562,17 @@
     <div class="highlight-card reveal">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12h20"/><path d="M4 12V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 12v3c1.5 1.5 3 1.5 4.5 0S9 13.5 9 15s1.5 1.5 3 1.5S15 13.5 15 15s1.5 1.5 3 1.5S21 13.5 22 12"/></svg>
       <span class="highlight-number">Piscina</span>
-      <span class="highlight-label">com deck</span>
+      <span class="highlight-label">com pergolado</span>
     </div>
     <div class="highlight-card reveal">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 21v-8a6 6 0 0 1 12 0v8"/><path d="M4 21h16"/><path d="M9 21v-4M15 21v-4"/></svg>
       <span class="highlight-number">Área gourmet</span>
       <span class="highlight-label">com churrasqueira</span>
+    </div>
+    <div class="highlight-card reveal">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M4.6 4.6l1.77 1.77M17.63 17.63l1.77 1.77M2.5 12h2.5M19 12h2.5M4.6 19.4l1.77-1.77M17.63 6.37l1.77-1.77"/></svg>
+      <span class="highlight-number">Energia solar</span>
+      <span class="highlight-label">850+ kWh/mês</span>
     </div>
     <div class="highlight-card reveal">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V10l9-6 9 6v11"/><path d="M7 21v-6h10v6"/></svg>
@@ -463,33 +584,50 @@
 
 <!-- SOBRE -->
 <section class="about">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Sobre o imóvel</span>
-      <h2>Design contemporâneo em cada detalhe</h2>
-      <p>Linhas retas e iluminação natural marcam esta casa térrea, com ambientes de estar, jantar e cozinha totalmente integrados. Acabamento de alto padrão com forro de gesso, iluminação embutida e porcelanato em todos os ambientes. Terreno amplo de 640 m², com área de lazer completa: piscina com deck e espaço gourmet prontos para receber.</p>
+  <div class="container about-grid">
+    <div>
+      <div class="section-head reveal">
+        <span class="eyebrow">Sobre o imóvel</span>
+        <h2>Design contemporâneo em cada detalhe</h2>
+      </div>
+      <p class="reveal">Linhas retas e iluminação natural marcam esta casa térrea, com ambientes de estar, jantar e cozinha totalmente integrados. Acabamento de alto padrão com forro de gesso, iluminação embutida e porcelanato em todos os ambientes. Terreno amplo de 640 m², com área de lazer completa: piscina aquecida automaticamente por energia solar, com pergolado de madeira, além de espaço gourmet pronto para receber. A casa ainda conta com geração própria de energia solar, com produção superior a 850 kWh por mês.</p>
     </div>
 
     <div class="diff-grid">
       <div class="diff-card reveal">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12h20"/><path d="M4 12V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 12v3c1.5 1.5 3 1.5 4.5 0S9 13.5 9 15s1.5 1.5 3 1.5S15 13.5 15 15s1.5 1.5 3 1.5S21 13.5 22 12"/></svg>
-        <h3>Piscina com deck</h3>
-        <p>Deck em porcelanato e paisagismo ao redor, pronta para os dias quentes.</p>
+        <div class="diff-text">
+          <h3>Piscina aquecida</h3>
+          <p>Aquecimento solar automático e pergolado de madeira ao redor.</p>
+        </div>
+      </div>
+      <div class="diff-card reveal">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M4.6 4.6l1.77 1.77M17.63 17.63l1.77 1.77M2.5 12h2.5M19 12h2.5M4.6 19.4l1.77-1.77M17.63 6.37l1.77-1.77"/></svg>
+        <div class="diff-text">
+          <h3>Energia solar</h3>
+          <p>Placas fotovoltaicas com produção própria superior a 850 kWh por mês.</p>
+        </div>
       </div>
       <div class="diff-card reveal">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 21v-8a6 6 0 0 1 12 0v8"/><path d="M4 21h16"/><path d="M9 21v-4M15 21v-4"/></svg>
-        <h3>Espaço gourmet</h3>
-        <p>Churrasqueira e bancada em granito, ideal para receber amigos e família.</p>
+        <div class="diff-text">
+          <h3>Espaço gourmet</h3>
+          <p>Churrasqueira e bancada em granito, ideal para receber amigos e família.</p>
+        </div>
       </div>
       <div class="diff-card reveal">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><circle cx="8" cy="6.5" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="6.5" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="6.5" r=".6" fill="currentColor" stroke="none"/></svg>
-        <h3>Forro de gesso</h3>
-        <p>Com iluminação embutida, trazendo um acabamento moderno e aconchegante.</p>
+        <div class="diff-text">
+          <h3>Forro de gesso</h3>
+          <p>Com iluminação embutida, trazendo um acabamento moderno e aconchegante.</p>
+        </div>
       </div>
       <div class="diff-card reveal">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
-        <h3>Piso porcelanato</h3>
-        <p>Em todos os ambientes, unificando os espaços com elegância e fácil limpeza.</p>
+        <div class="diff-text">
+          <h3>Piso porcelanato</h3>
+          <p>Em todos os ambientes, unificando os espaços com elegância e fácil limpeza.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -506,42 +644,52 @@
     <div class="gallery-grid" id="galleryGrid">
       <div class="gallery-item wide reveal" data-index="0">
         <img src="images/foto2.jpeg" alt="Fachada da casa com garagem coberta e jardim frontal" loading="lazy">
+        <span class="gallery-index">01</span>
         <span class="gallery-caption">Fachada</span>
       </div>
       <div class="gallery-item reveal" data-index="1">
         <img src="images/foto1.jpeg" alt="Portão de entrada e muro da residência" loading="lazy">
+        <span class="gallery-index">02</span>
         <span class="gallery-caption">Portão de entrada</span>
       </div>
       <div class="gallery-item reveal" data-index="2">
-        <img src="images/foto3.jpeg" alt="Piscina com deck em porcelanato e paisagismo" loading="lazy">
+        <img src="images/foto3.jpeg" alt="Piscina com pergolado de madeira e paisagismo" loading="lazy">
+        <span class="gallery-index">03</span>
         <span class="gallery-caption">Piscina</span>
       </div>
       <div class="gallery-item wide reveal" data-index="3">
         <img src="images/foto4.jpeg" alt="Área gourmet com churrasqueira e bancada em granito" loading="lazy">
+        <span class="gallery-index">04</span>
         <span class="gallery-caption">Área gourmet</span>
       </div>
       <div class="gallery-item reveal" data-index="4">
         <img src="images/foto5.jpeg" alt="Sala de estar e jantar integrada com a cozinha" loading="lazy">
+        <span class="gallery-index">05</span>
         <span class="gallery-caption">Sala de estar e jantar</span>
       </div>
       <div class="gallery-item reveal" data-index="5">
         <img src="images/foto6.jpeg" alt="Sala de TV com sofá e ar-condicionado" loading="lazy">
+        <span class="gallery-index">06</span>
         <span class="gallery-caption">Sala de TV</span>
       </div>
       <div class="gallery-item wide reveal" data-index="6">
         <img src="images/foto7.jpeg" alt="Cozinha planejada com bancada e eletrodomésticos" loading="lazy">
+        <span class="gallery-index">07</span>
         <span class="gallery-caption">Cozinha</span>
       </div>
       <div class="gallery-item reveal" data-index="7">
         <img src="images/foto8.jpeg" alt="Suíte com cama de casal, ar-condicionado e TV" loading="lazy">
+        <span class="gallery-index">08</span>
         <span class="gallery-caption">Suíte</span>
       </div>
       <div class="gallery-item reveal" data-index="8">
         <img src="images/foto10.jpg" alt="Quarto com cama de casal, guarda-roupa e janela para o jardim" loading="lazy">
+        <span class="gallery-index">09</span>
         <span class="gallery-caption">Quarto</span>
       </div>
       <div class="gallery-item wide reveal" data-index="9">
         <img src="images/foto9.jpeg" alt="Banheiro com box de vidro, vaso sanitário e pia" loading="lazy">
+        <span class="gallery-index">10</span>
         <span class="gallery-caption">Banheiro</span>
       </div>
     </div>
@@ -570,6 +718,7 @@
 <section class="location">
   <div class="location-inner reveal">
     <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="margin:0 auto 16px;"><path d="M12 22s7-7.58 7-12.5A7 7 0 0 0 5 9.5C5 14.42 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+    <span class="eyebrow">Localização</span>
     <h2>Bairro Bom Jardim</h2>
     <p>Campos de Júlio - MT<br>Localização privilegiada, em rua tranquila e arborizada.</p>
   </div>
