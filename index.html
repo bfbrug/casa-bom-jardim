@@ -64,12 +64,25 @@
     padding:0;
     overflow:hidden;
   }
-  .hero img{
+  .hero-bg{
     position:absolute;
     inset:0;
     width:100%;
     height:100%;
     object-fit:cover;
+    filter:blur(35px) brightness(.55) saturate(1.1);
+    transform:scale(1.2);
+  }
+  .hero-img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center 42%;
+  }
+  @media(min-width:900px){
+    .hero-img{object-fit:cover;object-position:center 38%;}
   }
   .hero::after{
     content:"";
@@ -396,7 +409,8 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img src="images/foto2.jpeg" alt="Fachada da casa moderna em cinza grafite com garagem coberta e jardim" fetchpriority="high">
+  <img class="hero-bg" src="images/foto2.jpeg" alt="" aria-hidden="true">
+  <img class="hero-img" src="images/foto2.jpeg" alt="Fachada da casa moderna em cinza grafite com garagem coberta e jardim" fetchpriority="high">
   <div class="hero-content">
     <span class="badge">Casa à venda</span>
     <h1>Casa moderna com piscina</h1>
