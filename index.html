@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa moderna com piscina à venda | Bom Jardim, Campos de Júlio - MT</title>
+<meta name="description" content="Casa térrea moderna à venda no Bairro Bom Jardim, Campos de Júlio - MT. 3 quartos (1 suíte), piscina, área gourmet, 640 m². Fale agora pelo WhatsApp.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Casa moderna com piscina à venda | Bom Jardim, Campos de Júlio - MT">
+<meta property="og:description" content="Casa térrea moderna, 3 quartos (1 suíte), piscina, área gourmet e 640 m² de terreno. Fale agora pelo WhatsApp.">
+<meta property="og:image" content="images/foto2.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --graphite:#2b2f33;
+    --graphite-soft:#454b51;
+    --offwhite:#f6f6f4;
+    --white:#ffffff;
+    --line:#e4e2dd;
+    --whatsapp:#25D366;
+    --whatsapp-dark:#1ebd5a;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(43,47,51,.08);
+    --ff-title:'Outfit', sans-serif;
+    --ff-body:'Inter', sans-serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:var(--ff-body);
+    background:var(--offwhite);
+    color:var(--graphite);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  img{display:block;max-width:100%;}
+
+  h1,h2,h3{font-family:var(--ff-title);font-weight:600;letter-spacing:-0.02em;}
+
+  section{padding:64px 20px;}
+
+  .container{max-width:1120px;margin:0 auto;}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.is-visible{opacity:1;transform:translateY(0);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    height:100svh;
+    min-height:560px;
+    display:flex;
+    align-items:flex-end;
+    padding:0;
+    overflow:hidden;
+  }
+  .hero img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, rgba(20,22,24,0) 30%, rgba(20,22,24,.55) 70%, rgba(20,22,24,.88) 100%);
+  }
+  .hero-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    padding:0 20px 56px;
+    max-width:1120px;
+    margin:0 auto;
+    color:var(--white);
+  }
+  .badge{
+    display:inline-block;
+    background:rgba(246,246,244,.14);
+    border:1px solid rgba(255,255,255,.35);
+    backdrop-filter:blur(6px);
+    color:var(--white);
+    font-size:.78rem;
+    font-weight:500;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:7px 14px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(2rem, 6.5vw, 3.4rem);
+    line-height:1.08;
+    margin-bottom:14px;
+    max-width:14ch;
+  }
+  .hero-sub{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:clamp(1rem, 3vw, 1.15rem);
+    color:rgba(255,255,255,.92);
+    font-weight:500;
+  }
+  .hero-sub svg{flex-shrink:0;}
+
+  .scroll-indicator{
+    position:absolute;
+    left:50%;
+    bottom:18px;
+    transform:translateX(-50%);
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    color:rgba(255,255,255,.75);
+    animation:bob 2.2s ease-in-out infinite;
+  }
+  .scroll-indicator span{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;}
+  @keyframes bob{
+    0%,100%{transform:translate(-50%,0);}
+    50%{transform:translate(-50%,8px);}
+  }
+
+  /* ---------- DESTAQUES ---------- */
+  .highlights{padding:40px 16px;background:var(--white);}
+  .highlights-grid{
+    max-width:1120px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
+  }
+  .highlight-card{
+    background:var(--offwhite);
+    border-radius:var(--radius);
+    padding:20px 14px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .highlight-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .highlight-card svg{color:var(--graphite);}
+  .highlight-number{font-family:var(--ff-title);font-weight:600;font-size:1.05rem;}
+  .highlight-label{font-size:.8rem;color:var(--graphite-soft);}
+
+  @media(min-width:560px){
+    .highlights-grid{grid-template-columns:repeat(3, 1fr);}
+  }
+  @media(min-width:900px){
+    .highlights-grid{grid-template-columns:repeat(6, 1fr);}
+  }
+
+  /* ---------- SOBRE ---------- */
+  .section-head{max-width:640px;margin-bottom:32px;}
+  .eyebrow{
+    display:block;
+    font-size:.78rem;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--whatsapp-dark);
+    margin-bottom:10px;
+  }
+  .about h2{font-size:clamp(1.6rem, 4vw, 2.2rem);margin-bottom:14px;}
+  .about p{color:var(--graphite-soft);font-size:1.02rem;max-width:64ch;}
+
+  .diff-grid{
+    margin-top:36px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  .diff-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .diff-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .diff-card svg{color:var(--graphite);margin-bottom:14px;}
+  .diff-card h3{font-size:1.02rem;margin-bottom:6px;}
+  .diff-card p{font-size:.9rem;color:var(--graphite-soft);}
+
+  @media(min-width:640px){
+    .diff-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media(min-width:1000px){
+    .diff-grid{grid-template-columns:repeat(4, 1fr);}
+  }
+
+  /* ---------- GALERIA ---------- */
+  .gallery{background:var(--white);}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-auto-rows:150px;
+    gap:8px;
+  }
+  .gallery-item{
+    position:relative;
+    border-radius:var(--radius);
+    overflow:hidden;
+    cursor:pointer;
+    background:var(--offwhite);
+  }
+  .gallery-item.wide{grid-column:span 2;}
+  .gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .5s ease;
+  }
+  .gallery-item:hover img{transform:scale(1.06);}
+  .gallery-caption{
+    position:absolute;
+    left:0;right:0;bottom:0;
+    padding:18px 12px 10px;
+    font-size:.75rem;
+    color:var(--white);
+    background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.55));
+  }
+
+  @media(min-width:600px){
+    .gallery-grid{grid-auto-rows:200px;}
+  }
+  @media(min-width:900px){
+    .gallery-grid{grid-template-columns:repeat(4, 1fr);grid-auto-rows:230px;}
+  }
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(20,20,20,.96);
+    z-index:100;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+  }
+  .lightbox.is-open{display:flex;}
+  .lightbox-figure{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    touch-action:pan-y;
+  }
+  .lightbox-figure img{
+    max-width:92vw;
+    max-height:78vh;
+    object-fit:contain;
+    border-radius:6px;
+  }
+  .lightbox-caption{
+    position:absolute;
+    bottom:24px;
+    left:0;right:0;
+    text-align:center;
+    color:var(--white);
+    font-size:.85rem;
+  }
+  .lightbox-counter{
+    position:absolute;
+    top:18px;
+    left:20px;
+    color:rgba(255,255,255,.75);
+    font-size:.8rem;
+    letter-spacing:.04em;
+  }
+  .lightbox-close,
+  .lightbox-nav{
+    position:absolute;
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.25);
+    color:var(--white);
+    border-radius:50%;
+    width:44px;
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:background .2s ease;
+  }
+  .lightbox-close:hover,
+  .lightbox-nav:hover{background:rgba(255,255,255,.25);}
+  .lightbox-close{top:16px;right:16px;}
+  .lightbox-nav.prev{left:12px;top:50%;transform:translateY(-50%);}
+  .lightbox-nav.next{right:12px;top:50%;transform:translateY(-50%);}
+  @media(min-width:640px){
+    .lightbox-nav.prev{left:24px;}
+    .lightbox-nav.next{right:24px;}
+  }
+
+  /* ---------- LOCALIZAÇÃO ---------- */
+  .location{
+    background:var(--graphite);
+    color:var(--white);
+    text-align:center;
+  }
+  .location-inner{max-width:520px;margin:0 auto;}
+  .location svg{color:var(--white);margin-bottom:16px;}
+  .location h2{font-size:clamp(1.4rem, 4vw, 1.9rem);margin-bottom:10px;}
+  .location p{color:rgba(255,255,255,.72);font-size:.98rem;}
+
+  /* ---------- CTA FINAL ---------- */
+  .cta{
+    background:var(--offwhite);
+    text-align:center;
+  }
+  .cta-inner{max-width:520px;margin:0 auto;}
+  .cta h2{font-size:clamp(1.6rem, 4.5vw, 2.2rem);margin-bottom:10px;}
+  .cta p{color:var(--graphite-soft);margin-bottom:30px;}
+
+  .btn-whatsapp{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--whatsapp);
+    color:var(--white);
+    font-family:var(--ff-body);
+    font-weight:600;
+    font-size:1rem;
+    padding:16px 30px;
+    border-radius:999px;
+    text-decoration:none;
+    box-shadow:0 10px 24px rgba(37,211,102,.35);
+    transition:transform .2s ease, background .2s ease;
+  }
+  .btn-whatsapp:hover{background:var(--whatsapp-dark);transform:translateY(-2px);}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:26px 20px;
+    text-align:center;
+    background:var(--graphite);
+    color:rgba(255,255,255,.55);
+    font-size:.82rem;
+  }
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  .float-whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:50;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:var(--whatsapp);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 8px 22px rgba(37,211,102,.45);
+    text-decoration:none;
+  }
+  .float-whatsapp::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:var(--whatsapp);
+    animation:pulse 2.4s ease-out infinite;
+    z-index:-1;
+  }
+  @keyframes pulse{
+    0%{transform:scale(1);opacity:.55;}
+    100%{transform:scale(1.9);opacity:0;}
+  }
+
+  svg{display:block;}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="images/foto2.jpeg" alt="Fachada da casa moderna em cinza grafite com garagem coberta e jardim" fetchpriority="high">
+  <div class="hero-content">
+    <span class="badge">Casa à venda</span>
+    <h1>Casa moderna com piscina</h1>
+    <p class="hero-sub">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22s7-7.58 7-12.5A7 7 0 0 0 5 9.5C5 14.42 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      Bom Jardim · Campos de Júlio, MT
+    </p>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>Role para ver mais</span>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+  </div>
+</section>
+
+<!-- DESTAQUES -->
+<section class="highlights">
+  <div class="highlights-grid">
+    <div class="highlight-card reveal">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18v-6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v6"/><path d="M3 18h18"/><path d="M5 9V7a2 2 0 0 1 2-2h3v4"/><path d="M3 18v2M21 18v2"/></svg>
+      <span class="highlight-number">3 quartos</span>
+      <span class="highlight-label">sendo 1 suíte</span>
+    </div>
+    <div class="highlight-card reveal">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16a1 1 0 0 1 1 1v2a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-2a1 1 0 0 1 1-1Z"/><path d="M6 12V6a2 2 0 0 1 3.2-1.6"/><path d="M8 19v2M16 19v2"/></svg>
+      <span class="highlight-number">2 banheiros</span>
+      <span class="highlight-label">completos</span>
+    </div>
+    <div class="highlight-card reveal">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      <span class="highlight-number">640 m²</span>
+      <span class="highlight-label">terreno 16x40m</span>
+    </div>
+    <div class="highlight-card reveal">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12h20"/><path d="M4 12V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 12v3c1.5 1.5 3 1.5 4.5 0S9 13.5 9 15s1.5 1.5 3 1.5S15 13.5 15 15s1.5 1.5 3 1.5S21 13.5 22 12"/></svg>
+      <span class="highlight-number">Piscina</span>
+      <span class="highlight-label">com deck</span>
+    </div>
+    <div class="highlight-card reveal">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 21v-8a6 6 0 0 1 12 0v8"/><path d="M4 21h16"/><path d="M9 21v-4M15 21v-4"/></svg>
+      <span class="highlight-number">Área gourmet</span>
+      <span class="highlight-label">com churrasqueira</span>
+    </div>
+    <div class="highlight-card reveal">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V10l9-6 9 6v11"/><path d="M7 21v-6h10v6"/></svg>
+      <span class="highlight-number">Garagem</span>
+      <span class="highlight-label">coberta</span>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Sobre o imóvel</span>
+      <h2>Design contemporâneo em cada detalhe</h2>
+      <p>Linhas retas e iluminação natural marcam esta casa térrea, com ambientes de estar, jantar e cozinha totalmente integrados. Acabamento de alto padrão com forro de gesso, iluminação embutida e porcelanato em todos os ambientes. Terreno amplo de 640 m², com área de lazer completa: piscina com deck e espaço gourmet prontos para receber.</p>
+    </div>
+
+    <div class="diff-grid">
+      <div class="diff-card reveal">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12h20"/><path d="M4 12V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 12v3c1.5 1.5 3 1.5 4.5 0S9 13.5 9 15s1.5 1.5 3 1.5S15 13.5 15 15s1.5 1.5 3 1.5S21 13.5 22 12"/></svg>
+        <h3>Piscina com deck</h3>
+        <p>Deck em porcelanato e paisagismo ao redor, pronta para os dias quentes.</p>
+      </div>
+      <div class="diff-card reveal">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 21v-8a6 6 0 0 1 12 0v8"/><path d="M4 21h16"/><path d="M9 21v-4M15 21v-4"/></svg>
+        <h3>Espaço gourmet</h3>
+        <p>Churrasqueira e bancada em granito, ideal para receber amigos e família.</p>
+      </div>
+      <div class="diff-card reveal">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><circle cx="8" cy="6.5" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="6.5" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="6.5" r=".6" fill="currentColor" stroke="none"/></svg>
+        <h3>Forro de gesso</h3>
+        <p>Com iluminação embutida, trazendo um acabamento moderno e aconchegante.</p>
+      </div>
+      <div class="diff-card reveal">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
+        <h3>Piso porcelanato</h3>
+        <p>Em todos os ambientes, unificando os espaços com elegância e fácil limpeza.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Galeria</span>
+      <h2>Conheça cada ambiente</h2>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item wide reveal" data-index="0">
+        <img src="images/foto2.jpeg" alt="Fachada da casa com garagem coberta e jardim frontal" loading="lazy">
+        <span class="gallery-caption">Fachada</span>
+      </div>
+      <div class="gallery-item reveal" data-index="1">
+        <img src="images/foto1.jpeg" alt="Portão de entrada e muro da residência" loading="lazy">
+        <span class="gallery-caption">Portão de entrada</span>
+      </div>
+      <div class="gallery-item reveal" data-index="2">
+        <img src="images/foto3.jpeg" alt="Piscina com deck em porcelanato e paisagismo" loading="lazy">
+        <span class="gallery-caption">Piscina</span>
+      </div>
+      <div class="gallery-item wide reveal" data-index="3">
+        <img src="images/foto4.jpeg" alt="Área gourmet com churrasqueira e bancada em granito" loading="lazy">
+        <span class="gallery-caption">Área gourmet</span>
+      </div>
+      <div class="gallery-item reveal" data-index="4">
+        <img src="images/foto5.jpeg" alt="Sala de estar e jantar integrada com a cozinha" loading="lazy">
+        <span class="gallery-caption">Sala de estar e jantar</span>
+      </div>
+      <div class="gallery-item reveal" data-index="5">
+        <img src="images/foto6.jpeg" alt="Sala de TV com sofá e ar-condicionado" loading="lazy">
+        <span class="gallery-caption">Sala de TV</span>
+      </div>
+      <div class="gallery-item wide reveal" data-index="6">
+        <img src="images/foto7.jpeg" alt="Cozinha planejada com bancada e eletrodomésticos" loading="lazy">
+        <span class="gallery-caption">Cozinha</span>
+      </div>
+      <div class="gallery-item reveal" data-index="7">
+        <img src="images/foto8.jpeg" alt="Suíte com cama de casal, ar-condicionado e TV" loading="lazy">
+        <span class="gallery-caption">Suíte</span>
+      </div>
+      <div class="gallery-item reveal" data-index="8">
+        <img src="images/foto10.jpg" alt="Quarto com cama de casal, guarda-roupa e janela para o jardim" loading="lazy">
+        <span class="gallery-caption">Quarto</span>
+      </div>
+      <div class="gallery-item wide reveal" data-index="9">
+        <img src="images/foto9.jpeg" alt="Banheiro com box de vidro, vaso sanitário e pia" loading="lazy">
+        <span class="gallery-caption">Banheiro</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização de fotos">
+  <div class="lightbox-figure" id="lightboxFigure">
+    <span class="lightbox-counter" id="lightboxCounter">1/10</span>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar visualização">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Foto anterior">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Próxima foto">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+    <span class="lightbox-caption" id="lightboxCaption"></span>
+  </div>
+</div>
+
+<!-- LOCALIZAÇÃO -->
+<section class="location">
+  <div class="location-inner reveal">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="margin:0 auto 16px;"><path d="M12 22s7-7.58 7-12.5A7 7 0 0 0 5 9.5C5 14.42 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+    <h2>Bairro Bom Jardim</h2>
+    <p>Campos de Júlio - MT<br>Localização privilegiada, em rua tranquila e arborizada.</p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta">
+  <div class="cta-inner reveal">
+    <h2>Gostou da casa?</h2>
+    <p>Fale agora pelo WhatsApp e agende uma visita para conhecer cada detalhe pessoalmente.</p>
+    <a class="btn-whatsapp" href="https://wa.me/5565998022311?text=Ol%C3%A1!%20Vi%20o%20an%C3%BAncio%20da%20casa%20no%20Bom%20Jardim%20e%20tenho%20interesse.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener" aria-label="Falar com o anunciante pelo WhatsApp">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.4-1.36a9.9 9.9 0 0 0 4.64 1.15h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2Zm0 1.8a8.1 8.1 0 0 1 8.1 8.11c0 4.47-3.64 8.11-8.11 8.11a8.1 8.1 0 0 1-4.11-1.12l-.29-.17-3.2.81.85-3.12-.19-.32a8.07 8.07 0 0 1-1.25-4.32c0-4.47 3.64-8.1 8.2-8.1v.02Zm4.48 5.79c-.22-.5-.45-.5-.66-.51h-.56c-.2 0-.52.07-.79.37s-1.03 1-1.03 2.45 1.06 2.85 1.2 3.05c.15.19 2.06 3.14 5 4.31.7.28 1.24.44 1.66.56.7.19 1.34.16 1.84.1.56-.07 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.13-.26-.2-.55-.35s-1.72-.85-1.99-.94c-.27-.1-.46-.15-.65.15s-.75.94-.92 1.13c-.17.19-.34.22-.63.08-.29-.15-1.23-.45-2.35-1.44-.87-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.63-.92-2.23Z"/></svg>
+      Falar no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Bairro Bom Jardim, Campos de Júlio - MT · Contato: (65) 99802-2311</p>
+</footer>
+
+<!-- BOTÃO FLUTUANTE -->
+<a class="float-whatsapp" href="https://wa.me/5565998022311?text=Ol%C3%A1!%20Vi%20o%20an%C3%BAncio%20da%20casa%20no%20Bom%20Jardim%20e%20tenho%20interesse.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener" aria-label="Falar com o anunciante pelo WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.4-1.36a9.9 9.9 0 0 0 4.64 1.15h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2Zm0 1.8a8.1 8.1 0 0 1 8.1 8.11c0 4.47-3.64 8.11-8.11 8.11a8.1 8.1 0 0 1-4.11-1.12l-.29-.17-3.2.81.85-3.12-.19-.32a8.07 8.07 0 0 1-1.25-4.32c0-4.47 3.64-8.1 8.2-8.1v.02Zm4.48 5.79c-.22-.5-.45-.5-.66-.51h-.56c-.2 0-.52.07-.79.37s-1.03 1-1.03 2.45 1.06 2.85 1.2 3.05c.15.19 2.06 3.14 5 4.31.7.28 1.24.44 1.66.56.7.19 1.34.16 1.84.1.56-.07 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.13-.26-.2-.55-.35s-1.72-.85-1.99-.94c-.27-.1-.46-.15-.65.15s-.75.94-.92 1.13c-.17.19-.34.22-.63.08-.29-.15-1.23-.45-2.35-1.44-.87-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.63-.92-2.23Z"/></svg>
+</a>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Reveal on scroll */
+  var revealEls = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(function(el){ observer.observe(el); });
+
+  /* Lightbox */
+  var items = Array.prototype.slice.call(document.querySelectorAll('.gallery-item'));
+  var photos = items.map(function(item){
+    var img = item.querySelector('img');
+    return { src: img.getAttribute('src'), alt: img.getAttribute('alt'), caption: item.querySelector('.gallery-caption').textContent };
+  });
+
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var lightboxCaption = document.getElementById('lightboxCaption');
+  var lightboxCounter = document.getElementById('lightboxCounter');
+  var currentIndex = 0;
+
+  function openLightbox(index){
+    currentIndex = index;
+    updateLightbox();
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(){
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  function updateLightbox(){
+    var photo = photos[currentIndex];
+    lightboxImg.setAttribute('src', photo.src);
+    lightboxImg.setAttribute('alt', photo.alt);
+    lightboxCaption.textContent = photo.caption;
+    lightboxCounter.textContent = (currentIndex + 1) + '/' + photos.length;
+  }
+
+  function showNext(){
+    currentIndex = (currentIndex + 1) % photos.length;
+    updateLightbox();
+  }
+
+  function showPrev(){
+    currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+    updateLightbox();
+  }
+
+  items.forEach(function(item, index){
+    item.addEventListener('click', function(){ openLightbox(index); });
+  });
+
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxNext').addEventListener('click', showNext);
+  document.getElementById('lightboxPrev').addEventListener('click', showPrev);
+
+  document.getElementById('lightboxFigure').addEventListener('click', function(e){
+    if(e.target === this){ closeLightbox(); }
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(!lightbox.classList.contains('is-open')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowRight') showNext();
+    if(e.key === 'ArrowLeft') showPrev();
+  });
+
+  /* Swipe support */
+  var touchStartX = 0;
+  var touchEndX = 0;
+  var figure = document.getElementById('lightboxFigure');
+
+  figure.addEventListener('touchstart', function(e){
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  figure.addEventListener('touchend', function(e){
+    touchEndX = e.changedTouches[0].screenX;
+    var delta = touchEndX - touchStartX;
+    if(Math.abs(delta) > 40){
+      if(delta < 0) showNext(); else showPrev();
+    }
+  }, { passive: true });
+
+})();
+</script>
+
+</body>
+</html>
